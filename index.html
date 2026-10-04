@@ -1744,9 +1744,15 @@ tr:last-child td{
                     <marker id="a10" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
                         <path d="M0,0 L0,6 L9,3 z" fill="#059669"/>
                     </marker>
+                    <marker id="a10-error" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#DC2626"/>
+                    </marker>
                 </defs>
 
-                <rect x="20" y="20" width="1160" height="520" rx="14" fill="#fff" stroke="#CBD5E1"/>
+                <rect x="20" y="20" width="290" height="520" fill="#FCFDFE"/>
+                <rect x="310" y="20" width="290" height="520" fill="#F7FCF9"/>
+                <rect x="600" y="20" width="290" height="520" fill="#F8FAFF"/>
+                <rect x="890" y="20" width="290" height="520" fill="#FFFCF7"/>
                 <line x1="310" y1="20" x2="310" y2="540" stroke="#CBD5E1"/>
                 <line x1="600" y1="20" x2="600" y2="540" stroke="#CBD5E1"/>
                 <line x1="890" y1="20" x2="890" y2="540" stroke="#CBD5E1"/>
@@ -1756,56 +1762,63 @@ tr:last-child td{
                 <rect x="600" y="20" width="290" height="52" fill="#EFF6FF"/>
                 <rect x="890" y="20" width="290" height="52" fill="#FFF7ED"/>
 
+                <line x1="310" y1="20" x2="310" y2="72" stroke="#CBD5E1"/>
+                <line x1="600" y1="20" x2="600" y2="72" stroke="#CBD5E1"/>
+                <line x1="890" y1="20" x2="890" y2="72" stroke="#CBD5E1"/>
+
                 <text x="165" y="52" text-anchor="middle" font-size="14" font-weight="800" fill="#0B2A4A">KHÁCH HÀNG / CLIENT APP</text>
                 <text x="455" y="52" text-anchor="middle" font-size="14" font-weight="800" fill="#0B2A4A">BUSINESS LAYER</text>
                 <text x="745" y="52" text-anchor="middle" font-size="14" font-weight="800" fill="#0B2A4A">PAYMENT GATEWAY</text>
                 <text x="1035" y="52" text-anchor="middle" font-size="14" font-weight="800" fill="#0B2A4A">WAREHOUSE</text>
 
-                <circle cx="165" cy="102" r="14" fill="#0B2A4A"/>
-                <text x="165" y="139" text-anchor="middle" font-size="12" fill="#475569">Tạo đơn hàng</text>
-                <line x1="165" y1="116" x2="165" y2="175" stroke="#059669" stroke-width="2" marker-end="url(#a10)"/>
+                <circle cx="165" cy="112" r="13" fill="#0B2A4A"/>
+                <text x="165" y="146" text-anchor="middle" font-size="13" font-weight="600" fill="#475569">Tạo đơn hàng</text>
+                <path d="M165,125 V174 H370" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#a10)"/>
 
-                <rect x="375" y="165" width="160" height="55" rx="10" fill="#fff" stroke="#A7F3D0"/>
-                <text x="455" y="189" text-anchor="middle" font-size="12" font-weight="700">Xác thực</text>
-                <text x="455" y="207" text-anchor="middle" font-size="11" fill="#64748B">+ kiểm tra tồn kho</text>
+                <rect x="370" y="150" width="170" height="60" rx="10" fill="#fff" stroke="#86EFAC" stroke-width="1.5"/>
+                <text x="455" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#0B2A4A">Xác thực</text>
+                <text x="455" y="195" text-anchor="middle" font-size="12" fill="#64748B">Kiểm tra tồn kho</text>
 
-                <line x1="165" y1="175" x2="375" y2="190" stroke="#059669" stroke-width="2" marker-end="url(#a10)"/>
+                <rect x="370" y="238" width="170" height="60" rx="10" fill="#fff" stroke="#86EFAC" stroke-width="1.5"/>
+                <text x="455" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#0B2A4A">Giữ tồn kho</text>
+                <text x="455" y="283" text-anchor="middle" font-size="12" fill="#64748B">Hold Stock · 15 phút</text>
 
-                <rect x="375" y="245" width="160" height="55" rx="10" fill="#fff" stroke="#A7F3D0"/>
-                <text x="455" y="269" text-anchor="middle" font-size="12" font-weight="700">Hold Stock</text>
-                <text x="455" y="287" text-anchor="middle" font-size="11" fill="#64748B">15 phút</text>
+                <line x1="455" y1="210" x2="455" y2="238" stroke="#059669" stroke-width="2.5" marker-end="url(#a10)"/>
 
-                <line x1="455" y1="220" x2="455" y2="245" stroke="#059669" stroke-width="2" marker-end="url(#a10)"/>
+                <polygon points="455,324 505,356 455,388 405,356" fill="#FFF7ED" stroke="#F59E0B" stroke-width="1.5"/>
+                <text x="455" y="360" text-anchor="middle" font-size="12" font-weight="700" fill="#7C2D12">Còn hàng?</text>
 
-                <polygon points="455,325 500,355 455,385 410,355" fill="#FFF7ED" stroke="#F59E0B"/>
-                <text x="455" y="358" text-anchor="middle" font-size="11" font-weight="700">Còn hàng?</text>
+                <line x1="455" y1="298" x2="455" y2="324" stroke="#059669" stroke-width="2.5" marker-end="url(#a10)"/>
 
-                <line x1="455" y1="300" x2="455" y2="325" stroke="#059669" stroke-width="2" marker-end="url(#a10)"/>
+                <rect x="55" y="402" width="215" height="64" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+                <text x="162" y="429" text-anchor="middle" font-size="14" font-weight="700" fill="#991B1B">Hết hàng</text>
+                <text x="162" y="449" text-anchor="middle" font-size="12" fill="#64748B">Thông báo khách hàng</text>
+                <path d="M405,356 H300 V434 H270" fill="none" stroke="#DC2626" stroke-width="2.5" marker-end="url(#a10-error)"/>
+                <rect x="318" y="339" width="58" height="22" rx="11" fill="#fff"/>
+                <text x="347" y="354" text-anchor="middle" font-size="12" font-weight="700" fill="#DC2626">Không</text>
 
-                <rect x="55" y="390" width="215" height="60" rx="10" fill="#FEF2F2" stroke="#FECACA"/>
-                <text x="162" y="415" text-anchor="middle" font-size="12" font-weight="700" fill="#991B1B">Hết hàng</text>
-                <text x="162" y="434" text-anchor="middle" font-size="10" fill="#64748B">Thông báo khách hàng</text>
-                <path d="M410,355 H300 V420 H270" fill="none" stroke="#DC2626" stroke-width="2" marker-end="url(#a10)"/>
-                <text x="340" y="346" font-size="10" font-weight="700" fill="#DC2626">Không</text>
+                <rect x="675" y="397" width="170" height="64" rx="10" fill="#fff" stroke="#93C5FD" stroke-width="1.5"/>
+                <text x="760" y="424" text-anchor="middle" font-size="14" font-weight="700" fill="#0B2A4A">Thanh toán</text>
+                <text x="760" y="445" text-anchor="middle" font-size="12" fill="#64748B">VNPay / MoMo</text>
 
-                <rect x="670" y="405" width="150" height="55" rx="10" fill="#fff" stroke="#BFDBFE"/>
-                <text x="745" y="429" text-anchor="middle" font-size="12" font-weight="700">Thanh toán</text>
-                <text x="745" y="447" text-anchor="middle" font-size="11" fill="#64748B">VNPay / Momo...</text>
+                <path d="M505,356 L675,419" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#a10)"/>
+                <rect x="555" y="357" width="48" height="22" rx="11" fill="#fff"/>
+                <text x="579" y="372" text-anchor="middle" font-size="12" font-weight="700" fill="#047857">Có</text>
 
-                <line x1="500" y1="355" x2="670" y2="420" stroke="#059669" stroke-width="2" marker-end="url(#a10)"/>
-                <text x="570" y="378" font-size="10" fill="#059669">Có</text>
+                <rect x="370" y="420" width="170" height="64" rx="10" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+                <text x="455" y="447" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">CONFIRMED</text>
+                <text x="455" y="468" text-anchor="middle" font-size="12" fill="#64748B">Sau khi thanh toán thành công</text>
 
-                <rect x="375" y="425" width="160" height="55" rx="10" fill="#ECFDF5" stroke="#A7F3D0"/>
-                <text x="455" y="449" text-anchor="middle" font-size="12" font-weight="700">CONFIRMED</text>
-                <text x="455" y="467" text-anchor="middle" font-size="11" fill="#64748B">sau thanh toán thành công</text>
+                <path d="M675,440 H610 V452 H540" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#a10)"/>
+                <text x="610" y="432" text-anchor="middle" font-size="11" font-weight="600" fill="#047857">Thanh toán thành công</text>
 
-                <line x1="670" y1="445" x2="535" y2="450" stroke="#059669" stroke-width="2" marker-end="url(#a10)"/>
+                <rect x="950" y="420" width="170" height="64" rx="10" fill="#fff" stroke="#FCD34D" stroke-width="1.5"/>
+                <text x="1035" y="447" text-anchor="middle" font-size="14" font-weight="700" fill="#0B2A4A">Đóng gói / Xuất kho</text>
+                <text x="1035" y="468" text-anchor="middle" font-size="12" fill="#64748B">Bàn giao vận chuyển</text>
 
-                <rect x="955" y="425" width="160" height="55" rx="10" fill="#fff" stroke="#FDE68A"/>
-                <text x="1035" y="449" text-anchor="middle" font-size="12" font-weight="700">Đóng gói / Xuất kho</text>
-                <text x="1035" y="467" text-anchor="middle" font-size="11" fill="#64748B">bàn giao vận chuyển</text>
+                <path d="M455,484 V510 H1035 V484" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#a10)"/>
 
-                <path d="M455,480 V500 H1035 V480" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#a10)"/>
+                <rect x="20" y="20" width="1160" height="520" rx="14" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
 
             </svg>
         </div>
