@@ -91,6 +91,11 @@ button{
     z-index:2;
 }
 
+.slide-header > div:first-child{
+    flex:1 1 auto;
+    min-width:0;
+}
+
 .kicker{
     color:var(--green);
     text-transform:uppercase;
@@ -106,6 +111,7 @@ h1{
     margin:0;
     max-width:88%;
     letter-spacing:-.025em;
+    white-space:nowrap;
 }
 
 .subtitle{
@@ -612,6 +618,23 @@ tr:last-child td{
     object-fit:contain;
 }
 
+.class-diagram-image{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.class-diagram-image svg{
+    display:none !important;
+}
+
+.class-diagram-image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
 .erd-image{
     display:flex;
     align-items:center;
@@ -1060,6 +1083,7 @@ tr:last-child td{
     }
     h1{
         max-width:100%;
+        white-space:normal;
     }
     .content{
         flex:0 0 auto !important;
@@ -1675,17 +1699,17 @@ tr:last-child td{
                         <tr><th>ID</th><th>Yêu cầu</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>FR-ORD-001<br><span class="tag" style="margin-top:4px">(đề xuất)</span></td><td>Quản lý đặt hàng đa kênh.</td></tr>
-                        <tr><td>FR-INV-002<br><span class="tag" style="margin-top:4px">(đề xuất)</span></td><td>Khóa tồn kho thời gian thực.</td></tr>
-                        <tr><td>FR-PAY-003<br><span class="tag" style="margin-top:4px">(đề xuất)</span></td><td>Tích hợp và đối soát thanh toán.</td></tr>
-                        <tr><td>FR-WHS-004<br><span class="tag" style="margin-top:4px">(đề xuất)</span></td><td>Tiếp nhận và xử lý đơn hàng kho.</td></tr>
+                        <tr><td>FR-ORD-001<br><span class="tag" style="margin-top:4px"></span></td><td>Quản lý đặt hàng đa kênh.</td></tr>
+                        <tr><td>FR-INV-002<br><span class="tag" style="margin-top:4px"></span></td><td>Khóa tồn kho thời gian thực.</td></tr>
+                        <tr><td>FR-PAY-003<br><span class="tag" style="margin-top:4px"></span></td><td>Tích hợp và đối soát thanh toán.</td></tr>
+                        <tr><td>FR-WHS-004<br><span class="tag" style="margin-top:4px"></span></td><td>Tiếp nhận và xử lý đơn hàng kho.</td></tr>
                     </tbody>
                 </table>
                 <p style="font-size:10px;color:#64748B;margin-top:7px">Tài liệu chỉ nêu mẫu mã FR-ORD-001..; tên mã trên là cách gán ID đề xuất.</p>
             </div>
 
             <div>
-                <h3 style="margin:0 0 12px">Non-Functional Requirements · SMART</h3>
+                <h3 style="margin:0 0 12px">Non-Functional Requirements</h3>
                 <div class="metric-row">
                     <div class="metric">
                         <div class="value">99.9%</div>
@@ -1839,7 +1863,7 @@ tr:last-child td{
     <div class="slide-header">
         <div>
             <div class="kicker">10 · Use Case</div>
-            <h1>Use Case Diagram đặt Customer, Cashier, Warehouse Staff và System Admin quanh các nghiệp vụ cốt lõi</h1>
+            <h1>Use Case Diagram</h1>
         </div>
         <div class="page-no">11 / 23</div>
     </div>
@@ -2005,111 +2029,14 @@ tr:last-child td{
     <div class="slide-header">
         <div>
             <div class="kicker">12 · Class Diagram</div>
-            <h1>Class Diagram 3 ngăn biến Use Case thành cấu trúc OOP với kế thừa, Composition, Aggregation và Multiplicity</h1>
+            <h1>Class Diagram</h1>
         </div>
         <div class="page-no">13 / 23</div>
     </div>
 
     <div class="content">
-        <div class="diagram">
-            <svg viewBox="0 0 1200 560">
-                <defs>
-                    <marker id="inh13" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-                        <path d="M0,0 L0,6 L9,3 z" fill="#0B2A4A"/>
-                    </marker>
-                </defs>
-
-                <!-- User -->
-                <rect x="455" y="25" width="290" height="150" fill="#fff" stroke="#0B2A4A" stroke-width="2"/>
-                <rect x="455" y="25" width="290" height="38" fill="#EFF6FF"/>
-                <text x="600" y="50" text-anchor="middle" font-size="16" font-weight="800" fill="#0B2A4A">User</text>
-                <line x1="455" y1="63" x2="745" y2="63" stroke="#0B2A4A"/>
-                <text x="470" y="84" font-size="11" fill="#475569">- userId : String</text>
-                <text x="470" y="102" font-size="11" fill="#475569">- username : String</text>
-                <text x="470" y="120" font-size="11" fill="#475569">- password : String</text>
-                <text x="470" y="138" font-size="11" fill="#475569">- role : String</text>
-                <line x1="455" y1="148" x2="745" y2="148" stroke="#0B2A4A"/>
-                <text x="470" y="165" font-size="11" fill="#475569">+ authenticate() : Boolean (đề xuất)</text>
-
-                <!-- Customer -->
-                <rect x="170" y="225" width="250" height="125" fill="#fff" stroke="#0B2A4A"/>
-                <rect x="170" y="225" width="250" height="35" fill="#F8FAFC"/>
-                <text x="295" y="248" text-anchor="middle" font-size="15" font-weight="800" fill="#0B2A4A">Customer</text>
-                <line x1="170" y1="260" x2="420" y2="260" stroke="#0B2A4A"/>
-                <text x="185" y="282" font-size="11" fill="#475569">- customerInfo (đề xuất)</text>
-                <line x1="170" y1="296" x2="420" y2="296" stroke="#0B2A4A"/>
-                <text x="185" y="316" font-size="11" fill="#475569">+ placeOrder() (đề xuất)</text>
-                <text x="185" y="334" font-size="11" fill="#475569">+ viewOrder() (đề xuất)</text>
-
-                <!-- Staff -->
-                <rect x="780" y="225" width="250" height="125" fill="#fff" stroke="#0B2A4A"/>
-                <rect x="780" y="225" width="250" height="35" fill="#F8FAFC"/>
-                <text x="905" y="248" text-anchor="middle" font-size="15" font-weight="800" fill="#0B2A4A">Staff</text>
-                <line x1="780" y1="260" x2="1030" y2="260" stroke="#0B2A4A"/>
-                <text x="795" y="282" font-size="11" fill="#475569">- role : String</text>
-                <line x1="780" y1="296" x2="1030" y2="296" stroke="#0B2A4A"/>
-                <text x="795" y="316" font-size="11" fill="#475569">+ processOrder() (đề xuất)</text>
-                <text x="795" y="334" font-size="11" fill="#475569">+ manageAccess() (đề xuất)</text>
-
-                <path d="M530,175 L310,225" fill="none" stroke="#0B2A4A" stroke-width="2"/>
-                <path d="M670,175 L890,225" fill="none" stroke="#0B2A4A" stroke-width="2"/>
-                <polygon points="305,225 320,216 320,234" fill="#fff" stroke="#0B2A4A"/>
-                <polygon points="895,225 880,216 880,234" fill="#fff" stroke="#0B2A4A"/>
-
-                <!-- Order -->
-                <rect x="70" y="410" width="245" height="120" fill="#fff" stroke="#0B2A4A"/>
-                <rect x="70" y="410" width="245" height="34" fill="#ECFDF5"/>
-                <text x="192" y="433" text-anchor="middle" font-size="15" font-weight="800" fill="#0B2A4A">Order</text>
-                <line x1="70" y1="444" x2="315" y2="444" stroke="#0B2A4A"/>
-                <text x="85" y="465" font-size="11" fill="#475569">- orderId : String</text>
-                <text x="85" y="482" font-size="11" fill="#475569">- status : String</text>
-                <line x1="70" y1="491" x2="315" y2="491" stroke="#0B2A4A"/>
-                <text x="85" y="511" font-size="11" fill="#475569">+ confirm() (đề xuất)</text>
-
-                <!-- OrderItem -->
-                <rect x="390" y="410" width="245" height="120" fill="#fff" stroke="#0B2A4A"/>
-                <rect x="390" y="410" width="245" height="34" fill="#ECFDF5"/>
-                <text x="512" y="433" text-anchor="middle" font-size="15" font-weight="800" fill="#0B2A4A">OrderItem</text>
-                <line x1="390" y1="444" x2="635" y2="444" stroke="#0B2A4A"/>
-                <text x="405" y="465" font-size="11" fill="#475569">- quantity : Integer</text>
-                <text x="405" y="482" font-size="11" fill="#475569">- price : Double</text>
-                <line x1="390" y1="491" x2="635" y2="491" stroke="#0B2A4A"/>
-                <text x="405" y="511" font-size="11" fill="#475569">+ calculateTotal() (đề xuất)</text>
-
-                <!-- Product -->
-                <rect x="700" y="410" width="245" height="120" fill="#fff" stroke="#0B2A4A"/>
-                <rect x="700" y="410" width="245" height="34" fill="#EFF6FF"/>
-                <text x="822" y="433" text-anchor="middle" font-size="15" font-weight="800" fill="#0B2A4A">Product</text>
-                <line x1="700" y1="444" x2="945" y2="444" stroke="#0B2A4A"/>
-                <text x="715" y="465" font-size="11" fill="#475569">- productId : String</text>
-                <text x="715" y="482" font-size="11" fill="#475569">- unitPrice : Double</text>
-                <line x1="700" y1="491" x2="945" y2="491" stroke="#0B2A4A"/>
-                <text x="715" y="511" font-size="11" fill="#475569">+ checkStock() (đề xuất)</text>
-
-                <!-- Category -->
-                <rect x="980" y="410" width="170" height="100" fill="#fff" stroke="#0B2A4A"/>
-                <rect x="980" y="410" width="170" height="34" fill="#F8FAFC"/>
-                <text x="1065" y="433" text-anchor="middle" font-size="14" font-weight="800" fill="#0B2A4A">Category</text>
-                <line x1="980" y1="444" x2="1150" y2="444" stroke="#0B2A4A"/>
-                <text x="995" y="466" font-size="11" fill="#475569">- categoryId</text>
-                <line x1="980" y1="476" x2="1150" y2="476" stroke="#0B2A4A"/>
-                <text x="995" y="496" font-size="11" fill="#475569">+ manage() (đề xuất)</text>
-
-                <!-- relationships -->
-                <line x1="315" y1="470" x2="390" y2="470" stroke="#059669" stroke-width="3"/>
-                <polygon points="315,470 330,462 330,478" fill="#0B2A4A"/>
-                <text x="342" y="460" font-size="11" fill="#059669">1</text>
-                <text x="365" y="460" font-size="11" fill="#059669">1..*</text>
-
-                <line x1="635" y1="470" x2="700" y2="470" stroke="#475569" stroke-width="2"/>
-                <text x="642" y="460" font-size="11" fill="#475569">* </text>
-                <text x="668" y="460" font-size="11" fill="#475569">1</text>
-
-                <line x1="945" y1="460" x2="980" y2="460" stroke="#475569" stroke-width="2"/>
-                <polygon points="950,460 964,452 964,468" fill="#fff" stroke="#0B2A4A"/>
-                <text x="948" y="448" font-size="11" fill="#475569">0..1</text>
-                <text x="970" y="448" font-size="11" fill="#475569">1</text>
-            </svg>
+        <div class="diagram class-diagram-image">
+            <img src="Class_diagram.png" alt="Class Diagram FastMart-Enterprise">
         </div>
     </div>
 
@@ -2128,7 +2055,7 @@ tr:last-child td{
     <div class="slide-header">
         <div>
             <div class="kicker">13 · Sequence Diagram</div>
-            <h1>Sequence Diagram làm rõ thứ tự gọi giữa UI, Controller, Inventory, Payment và Database</h1>
+            <h1>Sequence Diagram</h1>
         </div>
         <div class="page-no">14 / 23</div>
     </div>
@@ -2308,7 +2235,7 @@ tr:last-child td{
     <div class="slide-header">
         <div>
             <div class="kicker">15 · ERD / 3NF</div>
-            <h1>ERD chuyển Class Diagram thành dữ liệu có PK/FK rõ ràng và dùng OrderItem để loại bỏ phụ thuộc không phù hợp</h1>
+            <h1>ERD Diagram</h1>
         </div>
         <div class="page-no">16 / 23</div>
     </div>
