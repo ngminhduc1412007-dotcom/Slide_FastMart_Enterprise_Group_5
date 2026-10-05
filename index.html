@@ -91,11 +91,6 @@ button{
     z-index:2;
 }
 
-.slide-header > div:first-child{
-    flex:1 1 auto;
-    min-width:0;
-}
-
 .kicker{
     color:var(--green);
     text-transform:uppercase;
@@ -111,7 +106,6 @@ h1{
     margin:0;
     max-width:88%;
     letter-spacing:-.025em;
-    white-space:nowrap;
 }
 
 .subtitle{
@@ -618,23 +612,6 @@ tr:last-child td{
     object-fit:contain;
 }
 
-.class-diagram-image{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.class-diagram-image svg{
-    display:none !important;
-}
-
-.class-diagram-image img{
-    display:block;
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
-
 .erd-image{
     display:flex;
     align-items:center;
@@ -1083,7 +1060,6 @@ tr:last-child td{
     }
     h1{
         max-width:100%;
-        white-space:normal;
     }
     .content{
         flex:0 0 auto !important;
@@ -1863,7 +1839,7 @@ tr:last-child td{
     <div class="slide-header">
         <div>
             <div class="kicker">10 · Use Case</div>
-            <h1>Use Case Diagram</h1>
+            <h1>Use Case Diagram đặt Customer, Cashier, Warehouse Staff và System Admin quanh các nghiệp vụ cốt lõi</h1>
         </div>
         <div class="page-no">11 / 23</div>
     </div>
@@ -2029,14 +2005,14 @@ tr:last-child td{
     <div class="slide-header">
         <div>
             <div class="kicker">12 · Class Diagram</div>
-            <h1>Class Diagram</h1>
+            <h1>Class Diagram 3 ngăn biến Use Case thành cấu trúc OOP với kế thừa, Composition, Aggregation và Multiplicity</h1>
         </div>
         <div class="page-no">13 / 23</div>
     </div>
 
     <div class="content">
-        <div class="diagram class-diagram-image">
-            <img src="Class_diagram.png" alt="Class Diagram FastMart-Enterprise">
+        <div class="diagram sequence-image">
+            <img src="Class_diagram.png" alt="Class diagram FastMart-Enterprise">
         </div>
     </div>
 
@@ -2055,7 +2031,7 @@ tr:last-child td{
     <div class="slide-header">
         <div>
             <div class="kicker">13 · Sequence Diagram</div>
-            <h1>Sequence Diagram</h1>
+            <h1>Sequence Diagram làm rõ thứ tự gọi giữa UI, Controller, Inventory, Payment và Database</h1>
         </div>
         <div class="page-no">14 / 23</div>
     </div>
@@ -2235,7 +2211,7 @@ tr:last-child td{
     <div class="slide-header">
         <div>
             <div class="kicker">15 · ERD / 3NF</div>
-            <h1>ERD Diagram</h1>
+            <h1>ERD chuyển Class Diagram thành dữ liệu có PK/FK rõ ràng và dùng OrderItem để loại bỏ phụ thuộc không phù hợp</h1>
         </div>
         <div class="page-no">16 / 23</div>
     </div>
